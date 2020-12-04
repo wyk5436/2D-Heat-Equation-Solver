@@ -17,6 +17,10 @@ delta_t = t / (grid_t + 1);
 A = diag(-4*ones(1,grid_x^2)) + diag(ones(1,grid_x^2-1),1) + diag(ones(1,grid_x^2-1),-1);
 A = A + diag(ones(1,grid_x^2-20),20) + diag(ones(1,grid_x^2-20),-20);
 A = k*A*(1/delta_x)^2;
+for i = 1:grid_x-1
+    A(grid_x*i,grid_x*i+1) = 0;
+    A(grid_x*i+1,grid_x*i) = 0;
+end
 
 % Dirichlet boundry conditions
 b = zeros(grid_x^2,1);
