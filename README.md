@@ -1,5 +1,5 @@
 # 2D Heat Equation Solver
-This is a 2D heat equation solver utilizing implicit finite difference method, written in MATLAB.
+This is a 2D heat equation solver utilizing the Crank-Nicolson method, written in MATLAB.
 
 # Visualization
 ![example_1.gif](/animations/example_1.gif?raw=true)
